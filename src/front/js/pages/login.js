@@ -26,8 +26,7 @@ export const Login = () => {
     const data = await response.json();
     localStorage.setItem("token", data.token);
     if (response.ok) {
-      // token = setToken(data.token)
-      // localStorage.setItem("token", data.token)
+      actions.settingLogIn()
       navigate("/private");
     } else {
       console.log("Error:", data);
